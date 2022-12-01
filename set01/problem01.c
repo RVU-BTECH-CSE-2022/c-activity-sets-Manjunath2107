@@ -79,8 +79,7 @@ int main(void) {
   return 0;*/
 
 #include <stdio.h>
-int main();
-{
+int main(){
   printf("Manjunath");
   return 0;
 }
