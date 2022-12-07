@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 long addTwoNumbers(long *, long *);
  
 int main()
@@ -15,10 +15,29 @@ int main()
    sum = addTwoNumbers(&fno, &sno);
    printf(" The sum of %ld and %ld  is %ld\n\n", fno, sno, sum);
    return 0;
-}
+}cd set01
 long addTwoNumbers(long *n1, long *n2) 
 {
    long sum;
    sum = *n1 + *n2;
    return sum;
+}
+*/
+
+#include <stdio.h>
+
+void add(int *num1, int *num2) 
+{
+    int sum;
+    sum = *num1 + *num2;
+    printf("Sum of the two numbers: %d\n",sum);
+}
+
+int main()
+{
+    int num1,num2;
+    printf("Enter the two numbers: \n");
+    scanf("%d%d",&num1,&num2);
+    add(&num1,&num2);
+    return 0;
 }

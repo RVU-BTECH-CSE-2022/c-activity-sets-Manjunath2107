@@ -1,4 +1,4 @@
-// C program for finding the largest integer
+/*// C program for finding the largest integer
 // among three numbers using command line arguments
 #include <stdio.h>
 #include <stdlib.h>
@@ -51,3 +51,45 @@ int main(int argc, char *argv[])
 	}
 	return 0;
 }
+*/
+
+#include<stdio.h>
+int input();
+int compare(int a,int b,int c);
+void output(int a,int b,int c);
+
+int input()
+{
+  int n;
+  printf("Enter the number \n");
+  scanf("%d",&n);
+  return n;
+}
+
+int compare(int a,int b,int c)
+{
+  int largest;
+  if((a>b)&&(a>c))
+    largest=a;
+    if((b>a)&&(b>c))
+    largest=b;
+    if((c>a)&&(c>b))
+    largest=c;
+  return largest;
+}
+
+void output(int a, int b, int c)
+{
+  printf("the largest of %d,%d and %d is %d",largest);
+}
+int main()
+{
+  int a,b,c,largest;
+  a=input();
+  b=input();
+  c=input();
+  largest=compare(a,b,c);
+  output(a,b,c,largest);
+  return 0;
+}
+

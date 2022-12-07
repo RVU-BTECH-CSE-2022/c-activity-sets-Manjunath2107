@@ -1,25 +1,52 @@
-// C Program to demonstrate
-// Sum of Natural Numbers
-// using while loops
+#include<stdio.h>
+int input_array_size();
+void input_array(int n,int a[n]);
+int sum_n_array(int n,int a[n]);
+void output(int n,int a[n], int sum);
 
-#include <stdio.h>
+int input_array_size()
+{
+  int n;
+  printf("Enter the size of the array\n");
+  sacnf("%d",&n);
+  return n;
+}
+
+void input_array(int n,int a[n])
+{
+  for (int i=0;i<n;i++)
+    {
+      scanf("%d",&a[i]);
+    }
+}
+
+int sum_n_array(int n, int a[n])
+{
+  int sum=0;
+  for(int i=0;i<n;i++)
+    {
+      sum=sum+a[i];
+    }
+  return sum;
+}
+
+void output(int n,int a[n],int sum)
+{
+  print("the sum of");
+  for (int i=0;i<n;i++)
+    {
+    printf("%d",a[i]);
+    }
+  printf("is %d",sum);
+}
+
 int main()
 {
-	int i, s = 0;
-	int n = 10;
-	i = 1;
-	
-	// while loop executes
-	// the statements until the
-	// condition is false
-	while (i <= n) {
-		
-		// adding natural numbers
-		// up to given number n
-		s += i;
-		i++;
-	}
-	// printing the result
-	printf("Sum = %d", s);
-	return 0;
+  int n;
+  n=input_array_size();
+  int a[n];
+  input_array(n, a);
+  sum=sum_n_array(n, a);
+  output(n, sum);
+  return 0;
 }
