@@ -8,7 +8,7 @@ int input_array_size()
 {
   int n;
   printf("Enter the size of the array\n");
-  sacnf("%d",&n);
+  scanf("%d",&n);
   return n;
 }
 

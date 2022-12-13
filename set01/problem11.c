@@ -63,3 +63,51 @@ complex add(complex x, complex y)
 	// return add
 	return (add);
 }
+
+
+#include<stdio.h>
+struct complex
+{
+float real;
+float imaginary;
+};
+typedef struct complex Complex;
+
+Complex input_complex();
+Complex add_complex(Complex a, COmplex b);
+void output(Complex a,Complex b,Complex sum);
+
+
+int main()
+{
+  Complex a,b, sum;
+  a=input_complex();
+  b=input_complex();
+  sum=add_complex(a,b);
+  output(a,b,sum);
+  return 0;
+}
+COmplex input_complex()
+{
+  COmplex C1;
+  printf("Enter the real part\n");
+  scanf("%f",&c1.real);
+    printf("Enter the imaginery part\n");
+  scanf("%f",&c1.imaginery);
+  return c1;
+}
+
+Complex add_complex(Complex a, COmplex b)
+{
+  Complex sum;
+  sum.real=a.real+b.real;
+  sum.imaginary=a.imaginary+b.imaginary;
+  return sum;
+}
+
+void output(Complex a,Complex b,Complex sum)
+{
+
+    printf("The sum of %f+%fi and %f+%fi is %f+%fi\n", a.real, a.imaginary, b.real, b.imaginary, sum.real, sum.imaginary);
+}
+}
