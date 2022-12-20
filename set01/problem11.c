@@ -1,4 +1,4 @@
-// C program to demonstrate
+/*// C program to demonstrate
 // addition of complex numbers
 #include <stdio.h>
 
@@ -63,7 +63,7 @@ complex add(complex x, complex y)
 	// return add
 	return (add);
 }
-
+*/
 
 #include<stdio.h>
 struct complex
@@ -87,9 +87,9 @@ int main()
   output(a,b,sum);
   return 0;
 }
-COmplex input_complex()
+Complex input_complex()
 {
-  COmplex C1;
+  Complex C1;
   printf("Enter the real part\n");
   scanf("%f",&c1.real);
     printf("Enter the imaginery part\n");

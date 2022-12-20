@@ -24,7 +24,7 @@ long addTwoNumbers(long *n1, long *n2)
 }
 */
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 void add(int *num1, int *num2) 
 {
@@ -40,4 +40,36 @@ int main()
     scanf("%d%d",&num1,&num2);
     add(&num1,&num2);
     return 0;
+}
+*/
+
+#include<stdio.h>
+int main();
+void add(int a,int b,int *sum);
+void output(int a, int b,int sum);
+
+int input()
+{
+int n;
+printf("Enter number\n");
+scanf("%d",&n);
+return n;
+}
+
+void add(int a,int b, int *sum)
+{
+  *sum=a+b;
+}
+
+void output(int a,int b,int sum)
+{
+  printf("The sum of %d and %d is %d",a,b,sum);
+}
+int main()
+{
+  int a,b,sum;
+  a=input();
+  b=input();
+  add(a,b,&sum);
+  output(a,b,sum);
 }
