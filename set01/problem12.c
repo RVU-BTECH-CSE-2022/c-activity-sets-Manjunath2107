@@ -1,17 +1,3 @@
-#include <stdio.h>
-int main() {
-    int n, i, sum = 0;
-
-    printf("Enter a positive integer: ");
-    scanf("%d", &n);
-
-    for (i = 1; i <= n; ++i) {
-        sum += i;
-    }
-
-    printf("Sum = %d", sum);
-    return 0;
-}
 
 #include<stdio.h>
 struct complex
@@ -24,19 +10,19 @@ typedef struct complex Complex;
 int main()
 {
   int n;
-  complex sum=(0,0)
+  Complex sum=(0,0);
   n=get_n();
   Complex c[n];
   input_n_complex(n, c);
   add_n_complex(n, c);
-  output(n, c, result)
+  output(n, c, result);
 }
 int get_n();
 Complex input_complex();
 void input_n_complex(int n,Complex c[n]);
 Complex add(Complex a, Complex b);
-Complex add_n_complex(int n,complex c[n]);
-void output(int n,complex c[n],complex result);
+Complex add_n_complex(int n,Complex c[n]);
+void output(int n,Complex c[n],Complex result);
 
 int get_n()
 {
@@ -51,7 +37,7 @@ Complex input_complex()
   Complex c;
   printf("Enter the real part\n");
     scanf("%f",&c.real);
-  printf("Enter the imaginary part\n");'
+  printf("Enter the imaginary part\n");
     scanf("%f", &c.imaginary);
     return c;
 }
@@ -72,17 +58,33 @@ Complex add(Complex a, Complex b)
   return a;
 }
 
-Complex add_n_complex(int n,complex c[n])
+Complex add_n_complex(int n,Complex c[n])
 {
   Complex sum=(0,0);
   for(int i=0;i<n;i++)
     {
-      sum=add(sum, c[i])
+      sum=add(sum, c[i]);
     }
   return sum;
 }
 
-void output(int n,complex c[n],complex result)
+void output(int n,Complex c[n],Complex result)
 {
-  printf("The sum is %f+%i",result.real,resutl.imaginary);
+  printf("The sum is %f+%i",result.real,result.imaginary);
 }
+
+/*#include <stdio.h>
+int main() {
+    int n, i, sum = 0;
+
+    printf("Enter a positive integer: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; ++i) {
+        sum += i;
+    }
+
+    printf("Sum = %d", sum);
+    return 0;
+}
+*/
